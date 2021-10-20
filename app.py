@@ -139,23 +139,23 @@ with col1:
     st.image('https://pbs.twimg.com/media/Elh-s4-XgAA2BJd.jpg', width=200, caption=get_name_from_rank_artist(df_my_fav_artist, 0))
     st.metric("Different music", df_number_music_by_artist[df_number_music_by_artist.artistName == get_name_from_rank_artist(df_my_fav_artist, 0)].trackName.item(), str(get_all_time_by_artist(dfHistChoice, get_name_from_rank_artist(df_my_fav_artist, 0))) + 'h')
 with col2:
-    st.image('./image-1.png', width=200, caption=get_name_from_rank_artist(df_my_fav_artist, 1))
+    st.image('./assets/image-1.png', width=200, caption=get_name_from_rank_artist(df_my_fav_artist, 1))
     st.metric("Different music", df_number_music_by_artist[df_number_music_by_artist.artistName == get_name_from_rank_artist(df_my_fav_artist, 1)].trackName.item(), str(int(get_all_song_about_artist(dfHistChoice, list(df_my_fav_artist.items())[1][0])['msPlayed'].sum() / (1000 * 60 * 60))) + 'h')
 with col3:
-    st.image('./image-2.png', width=200, caption=list(df_my_fav_artist.items())[2][0])
+    st.image('./assets/image-2.png', width=200, caption=list(df_my_fav_artist.items())[2][0])
     st.metric("Different music", df_number_music_by_artist[
         df_number_music_by_artist.artistName == list(df_my_fav_artist.items())[2][0]].trackName.item(), str(int(
         get_all_song_about_artist(dfHistChoice, list(df_my_fav_artist.items())[2][0])['msPlayed'].sum() / (
                     1000 * 60 * 60))) + 'h')
 
 with col4:
-    st.image('./image-3.png', width=200, caption=list(df_my_fav_artist.items())[3][0])
+    st.image('./assets/image-3.png', width=200, caption=list(df_my_fav_artist.items())[3][0])
     st.metric("Different music", df_number_music_by_artist[
         df_number_music_by_artist.artistName == list(df_my_fav_artist.items())[3][0]].trackName.item(), str(int(
         get_all_song_about_artist(dfHistChoice, list(df_my_fav_artist.items())[3][0])['msPlayed'].sum() / (
                     1000 * 60 * 60))) + 'h')
 with col5:
-    st.image('./image-4.png', width=200, caption=list(df_my_fav_artist.items())[4][0])
+    st.image('./assets/image-4.png', width=200, caption=list(df_my_fav_artist.items())[4][0])
     st.metric("Different music", df_number_music_by_artist[
         df_number_music_by_artist.artistName == list(df_my_fav_artist.items())[5][0]].trackName.item(), str(int(
         get_all_song_about_artist(dfHistChoice, list(df_my_fav_artist.items())[5][0])['msPlayed'].sum() / (
@@ -183,19 +183,19 @@ skip_line(1)
 col1, col2, col3, col4, col5 = st.columns(5)
 
 with col1:
-    st.image('./tchin.png', width=200, caption=df_my_fav_song.trackName[1])
+    st.image('./assets/tchin.png', width=200, caption=df_my_fav_song.trackName[1])
     st.metric("Number of times played", int(df_my_fav_song.endTime[1]), 2)
 with col2:
-    st.image('./california.png', width=200, caption=df_my_fav_song.trackName[2])
+    st.image('./assets/california.png', width=200, caption=df_my_fav_song.trackName[2])
     st.metric("Number of times played", int(df_my_fav_song.endTime[2]), 3)
 with col3:
-    st.image('./california.png', width=200, caption=df_my_fav_song.trackName[3])
+    st.image('./assets/california.png', width=200, caption=df_my_fav_song.trackName[3])
     st.metric("Number of times played", int(df_my_fav_song.endTime[3]), 4)
 with col4:
-    st.image('./laylow.png', width=200, caption=df_my_fav_song.trackName[4])
+    st.image('./assets/laylow.png', width=200, caption=df_my_fav_song.trackName[4])
     st.metric("Number of times played", int(df_my_fav_song.endTime[4]), 5)
 with col5:
-    st.image('./cheddar.png', width=200, caption=df_my_fav_song.trackName[5])
+    st.image('./assets/cheddar.png', width=200, caption=df_my_fav_song.trackName[5])
     st.metric("Number of times played", int(df_my_fav_song.endTime[5]), 6)
 
 skip_line(10)
