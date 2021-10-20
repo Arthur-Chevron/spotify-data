@@ -5,6 +5,7 @@
 import pandas as pd
 import streamlit as st
 
+
 # toutes les fonctions
 def get_all_from_year(df, year_string):
     full_date_begin = year_string + '-01-01'
